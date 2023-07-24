@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="staubli_tx2_60l" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find staubli_tx2_60l_description)/urdf/tx2_60l_macro.xacro"/>
+    <xacro:staubli_tx2_60l prefix=""/>
+
+    <!--Links-->
+        <link name="world"/>
+
+        <!--Test links-->
+        <link name="A_1"/>
+        <link name="A_2"/>
+        <!-- <link name="B_1"/> -->
+        <!-- <link name="B_1"/> -->
+
+    <!--Joints-->
+        <joint name="world_to_robot" type="fixed">
+            <parent link="world"/>
+            <child link="base_link"/>
+            <origin xyz="0 0 0" rpy="0 0 ${radians(120)}"/>
+        </joint>
+
+        <!--Test joints-->
+        <joint name="world_to_A_1" type="fixed">
+            <parent link="world"/>
+            <child link="A_1"/>
+            <origin xyz="0.6 0.1 0.4" rpy="0 ${radians(90)} 0"/>
+        </joint>
+        <joint name="world_to_A_2" type="fixed">
+            <parent link="world"/>
+            <child link="A_2"/>
+            <origin xyz="0.65 -0.3 0.3" rpy="0 ${radians(90)} 0"/>
+        </joint>
+</robot>

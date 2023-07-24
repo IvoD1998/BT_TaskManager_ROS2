@@ -1,0 +1,6 @@
+string intervention
+int8 priority
+---
+bool success
+string message
+string uuid

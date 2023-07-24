@@ -1,0 +1,84 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="InterventionA">
+        <Sequence>
+            <!-- INIT TREE -->
+            <InitMoveRobot
+                initJointState="{initJointState}"
+                velocityScaling="1.0"
+                accelerationScaling="1.0"
+
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+
+            <!-- INTERVENTION -->
+            <MoveRobotTf
+                goalFrame="A_1"
+                referenceFrame="base_link"
+                eeFrame="tool0"
+                velocityScaling="1.0"
+                accelerationScaling="1.0"
+
+                prevNodeNumber="{nodeNumber}"
+                finalNode="false"
+                startingNode="{startingNode}"
+                canInterrupt="true"
+                nodeNumber="{nodeNumber}"
+                finalNode_out="{finalNode}"
+                canInterrupt_out="{canInterrupt}"
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+
+            <TestA  
+                sleepTimeMilliseconds="5000"
+
+                prevNodeNumber="{nodeNumber}"
+                finalNode="false"
+                startingNode="{startingNode}"
+                canInterrupt="true"
+                nodeNumber="{nodeNumber}"
+                finalNode_out="{finalNode}"
+                canInterrupt_out="{canInterrupt}"
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+            
+            <MoveRobotTf
+                goalFrame="A_2"
+                referenceFrame="base_link"
+                eeFrame="tool0"
+                velocityScaling="1.0"
+                accelerationScaling="1.0"
+
+                prevNodeNumber="{nodeNumber}"
+                finalNode="false"
+                startingNode="{startingNode}"
+                canInterrupt="true"
+                nodeNumber="{nodeNumber}"
+                finalNode_out="{finalNode}"
+                canInterrupt_out="{canInterrupt}"
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+
+            <TestA  
+                sleepTimeMilliseconds="5000"
+
+                prevNodeNumber="{nodeNumber}"
+                finalNode="false"
+                startingNode="{startingNode}"
+                canInterrupt="true"
+                nodeNumber="{nodeNumber}"
+                finalNode_out="{finalNode}"
+                canInterrupt_out="{canInterrupt}"
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+
+            <!--FINAL TREE-->
+            <FinalMoveRobot
+                namedGoal="allZeros"
+                velocityScaling="0.5"
+                accelerationScaling="0.5"
+
+                status="{status}"
+                errorMessage="{errorMessage}"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

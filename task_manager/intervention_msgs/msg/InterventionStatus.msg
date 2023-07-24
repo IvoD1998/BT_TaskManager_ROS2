@@ -1,0 +1,13 @@
+int8 status
+
+#Enumerated values
+int8 UNKNOWN=-1
+int8 QUEUED=0
+int8 ACCEPTED=1
+int8 STARTING=2
+int8 RUNNING=3
+int8 SUCCESS=4
+int8 FAILED=5
+int8 CANCELLED=6
+int8 REJECTED=7
+int8 SKIPPED=8

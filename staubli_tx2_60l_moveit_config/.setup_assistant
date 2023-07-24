@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: pfizer_support
+    relative_path: urdf/staubli_tx2_60l.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/staubli.srdf
+  CONFIG:
+    author_name: Ivo Dekker
+    author_email: ivo.dekker@kuleuven.be
+    generated_timestamp: 1636106423

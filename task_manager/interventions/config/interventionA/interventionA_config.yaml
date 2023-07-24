@@ -1,0 +1,88 @@
+interventionA:
+  testA_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "testA_action"
+      #Print to terminal
+      print: true
+  testB_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "testB_action"
+      #Print to terminal
+      print: true
+  move_robot_tf_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "move_robot_tf_action"
+      #Print to terminal
+      print: true
+  move_robot_named_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "move_robot_named_action"
+      #Print to terminal
+      print: true
+  init_move_robot_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "move_robot_joint_state_action"
+      #Print to terminal
+      print: true
+  final_move_robot_bt_node:
+    ros__parameters:
+      #Name of the action
+      action_name: "move_robot_named_action"
+      #Print to terminal
+      print: true
+  testA_action_server_node:
+    ros__parameters:
+      #Name of the action server for executing the task
+      action_name: "testA_action"
+      #Print to terminal
+      print: true
+  testB_action_server_node:
+    ros__parameters:
+      #Name of the action server for executing the task
+      action_name: "testB_action"
+      #Print to terminal
+      print: true
+  move_robot_tf_action_server_node:
+    ros__parameters:
+      #Name of the action server for executing the task
+      action_name: "move_robot_tf_action"
+      #Name of the robot to move
+      robot_name: "manipulator"
+      #Print to terminal
+      print: true
+  move_robot_named_action_server_node:
+    ros__parameters:
+      #Name of the action server for executing the task
+      action_name: "move_robot_named_action"
+      #Name of the robot to move
+      robot_name: "manipulator"
+      #Print to terminal
+      print: true
+  move_robot_joint_state_action_server_node:
+    ros__parameters:
+      #Name of the action server for executing the task
+      action_name: "move_robot_joint_state_action"
+      #Name of the robot to move
+      robot_name: "manipulator"
+      #Print to terminal
+      print: true
+  interventionA_node:
+    ros__parameters:
+      #Name of the action server for executing the intervention
+      action_name: "activate"
+      #Print to terminal
+      print: true
+
+/**:
+  ros__parameters:
+    #Update frequency of the behavior tree in milliseconds
+    #It is recommended to keep this value the same for all trees
+    tree_frequency: 100
+    #Timeout time in ms
+    #It is recommended to choose this as a multiple of the used tree frequency
+    timeout: 1000

@@ -1,0 +1,5 @@
+int8 new_priority
+string uuid
+---
+bool success
+string message

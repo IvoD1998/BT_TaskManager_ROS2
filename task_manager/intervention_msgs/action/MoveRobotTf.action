@@ -1,0 +1,12 @@
+#Input
+string goal_frame
+string reference_frame
+string ee_frame
+float32 vel_scaling
+float32 acc_scaling
+---
+#Output
+bool success
+string message
+---
+#Feedback

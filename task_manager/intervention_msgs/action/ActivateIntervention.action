@@ -1,0 +1,14 @@
+#Input
+int8 start_node
+sensor_msgs/JointState joint_state
+---
+#Output
+intervention_msgs/InterventionStatus end_status
+string error_message
+---
+#Feedback
+intervention_msgs/InterventionStatus status
+string intervention
+int8 node_number
+bool final_node
+
